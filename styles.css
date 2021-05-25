@@ -62,7 +62,7 @@ header {
   position: relative;
   text-align: center;
   color: white;
-  background-image: url("billeder/kim4.png");
+  background-image: url("billeder/Kim4.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -81,6 +81,16 @@ h2 {
   font-size: 50px;
   font-weight: 300;
   margin: 0px;
+}
+
+.overskrift {
+    grid-column: 1 / span 14;
+    text-align: center;
+    margin-top: 50px;
+
+}
+.overskrift h2 {
+    color: #104E64;
 }
 
 /* styling af bokse  ---------------------------------------------------*/
@@ -124,7 +134,16 @@ h2 {
 .tekst-art {
   grid-column: 4 / span 7;
   text-align: center;
+
 }
+
+.hide-art {
+  grid-column: 4 / span 7;
+  text-align: center;
+  margin-top: 50px;
+}
+
+
 
 .tekst-art p {
   text-align: left;
@@ -226,7 +245,7 @@ iframe {
   position: relative;
   width: 100%;
   height: 0;
-  padding-bottom: 51%;
+  padding-bottom: 56.25%;
 }
 
 .aspect-ratio iframe {
@@ -282,6 +301,14 @@ iframe {
   text-decoration: none;
   width: 100%;
   display: block;
+  padding: 10px 0px 10px 0px;
+  background-color: #F4E08F;
+  border-radius: 17px;
+  font-family: oswald;
+}
+.cv-knap:hover {
+  background-color: #124E65;
+  color:white;
 }
 
 .cv-tekst {
@@ -304,11 +331,8 @@ iframe {
 
 .cv-knap-art {
   grid-column: 6 / span 4;
-  background-color: #F4E08F;
-  border-radius: 17px;
-  font-family: oswald;
-  border-radius: 11px;
-  padding: 10px 0px 10px 0px;
+
+
 }
 
 /*-----------------Footer sektion */
