@@ -1,0 +1,488 @@
+@charset "UTF-8";
+
+/* CSS Document */
+/*skriftypeændringer!!----------------------------------------------------------------------*/
+body {
+  font-family: 'Libre Baskerville', serif;
+  margin: 0;
+  line-height: 1.8;
+}
+
+/* styling af header ---------------------------------------------------*/
+header {
+  display: grid;
+  grid-template-columns: repeat(14, [col-start] 1fr);
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.logo {
+  grid-column: 2 / span 2;
+  text-align: left;
+}
+
+.logo a img {
+  width: 150px;
+}
+
+.header-knap {
+  grid-column: 13 / span 2;
+  align-self: center;
+}
+
+.tlf-knap {
+  color: #104E64;
+  font-family: oswald;
+  border: solid 1px #104E64;
+  border-radius: 11px;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 25px;
+}
+
+.tlf-knap:hover {
+  background-color: #F4E48C;
+}
+
+.tlf-knap img {
+  width: 30px;
+  padding-right: 10px;
+  align-self: center;
+}
+
+/* styling af hero billede og overlay  ---------------------------------------------------*/
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(14, [col-start] 1fr);
+  margin-bottom: 70px;
+}
+
+.hero {
+  grid-column: 1 / span 14;
+  position: relative;
+  text-align: center;
+  color: white;
+  background-image: url("billeder/kim4.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 400px 0px 100px 0px;
+}
+
+h1 {
+  font-family: oswald;
+  font-size: 100px;
+  font-weight: 500;
+  margin: 0px;
+}
+
+h2 {
+  font-family: oswald;
+  font-size: 50px;
+  font-weight: 300;
+  margin: 0px;
+}
+
+/* styling af bokse  ---------------------------------------------------*/
+.bokse {
+  grid-column: 2 / span 12;
+}
+
+.knap {
+  color: #ffff;
+  background-color: #237D99;
+  font-family: oswald;
+  border-radius: 11px;
+  text-decoration: none;
+  padding: 10px 40px 10px 40px;
+}
+
+.knap:hover {
+  background-color: #124E65;
+}
+
+.ikon-img {
+  width: 200px;
+}
+
+.boks-sec {
+  margin-top: 50px;
+  background-color: white;
+  border-radius: 17px;
+  border: 1px solid #707078;
+  box-shadow: 8px 12px 12px 2px rgba(0, 0, 0, 0.48);
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  padding: 50px 0px 50px 0px;
+}
+
+.ikon {
+  grid-column: 2 / span 2;
+  align-self: center;
+}
+
+.tekst-art {
+  grid-column: 4 / span 7;
+  text-align: center;
+}
+
+.tekst-art p {
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.tekst-art h3 {
+  font-family: oswald;
+  color: #104E64;
+  font-size: 50px;
+  font-weight: 500;
+  margin-top: 0px;
+}
+
+/* styling pop up bokse--------------------------------------------------------------------------------------------------------------------------*/
+.tjek {
+  background-color: white;
+  grid-column: 1 / span 12;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  padding: 50px 0px 50px 0px;
+  display: none;
+}
+
+.video-wrap {
+  grid-column: 1 / span 12;
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/* styling af videoer--------------------------------------------------------------------------------------------------------------------------*/
+.video {
+  grid-column: 2 / span 5;
+  align-self: center;
+}
+
+.tekst {
+  grid-column: 8 / span 4;
+  text-align: center;
+  align-self: center;
+}
+
+.tekst p {
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.tekst h3 {
+  font-family: oswald;
+  color: #104E64;
+  font-size: 50px;
+  font-weight: 500;
+  margin-top: 0px;
+}
+
+/*-----------------showreel sektion */
+.showreel {
+  margin: 0px;
+  grid-column: 2 / span 12;
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  padding: 70px 0px 50px 0px;
+}
+
+.showreel-video {
+  grid-column: 1 / span 6;
+  align-self: center;
+}
+
+.showreel-tekst-art {
+  grid-column: 8 / span 5;
+  text-align: center;
+  align-self: center;
+}
+
+.showreel-tekst-art p {
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.showreel-tekst-art h3 {
+  font-family: oswald;
+  color: #104E64;
+  font-size: 50px;
+  font-weight: 500;
+  margin-top: 0px;
+}
+
+/* styling af videoer så de beholder formatet--------------------------------------------------------------------------------------------------------------------------*/
+iframe {
+  width: 100%;
+}
+
+.aspect-ratio {
+  /*https://fettblog.eu/blog/2013/06/16/preserving-aspect-ratio-for-embedded-iframes/?fbclid=IwAR3Dw4Xmouvkt7zS-Gj_LP-M0sU0NTADP10-ZHUTM5CrBYmDKVJYLv7vgyE*/
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 51%;
+}
+
+.aspect-ratio iframe {
+  /*https://fettblog.eu/blog/2013/06/16/preserving-aspect-ratio-for-embedded-iframes/?fbclid=IwAR3Dw4Xmouvkt7zS-Gj_LP-M0sU0NTADP10-ZHUTM5CrBYmDKVJYLv7vgyE*/
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+/*-----------------CV sektion */
+.container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  grid-column: 1 / span 14;
+  margin-top: 70px;
+}
+
+.main_image {
+  width: 100%;
+  height: 100%;
+  background: #237D99;
+}
+
+.overlay_image {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+  height: 100%;
+  background-image: url("billeder/waves.jpg");
+  background-size: cover;
+  opacity: 0.14;
+}
+
+.overlay_tekst {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  color: white;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(14, [col-start] 1fr);
+  margin: 0px;
+}
+
+.cv-knap {
+  color: #124E65;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+}
+
+.cv-tekst {
+  grid-column: 5 / span 6;
+  color: white;
+}
+
+.cv-tekst h3 {
+  font-family: oswald;
+  font-weight: 500;
+  font-size: 50px;
+  margin: 0;
+}
+
+.cv-tekst p {
+  font-family: oswald;
+  font-weight: 300;
+  font-size: 30px;
+}
+
+.cv-knap-art {
+  grid-column: 6 / span 4;
+  background-color: #F4E08F;
+  border-radius: 17px;
+  font-family: oswald;
+  border-radius: 11px;
+  padding: 10px 0px 10px 0px;
+}
+
+/*-----------------Footer sektion */
+footer {
+  background-color: #237D99;
+  padding: 30px 0px 30px 0px;
+  text-align: center;
+}
+
+footer a {
+  color: white;
+  font-size: 40px;
+  margin: 10px;
+}
+
+.fa {
+  background-color: blue;
+  padding: 10px 20px 10px 20px;
+  border-radius: 17px;
+}
+
+.fa-facebook {
+  background-color: #0E8CF1;
+}
+
+.fa-linkedin {
+  background-color: #0084B1;
+}
+
+.fa-youtube-play {
+  background-color: #FF0000;
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    display: grid;
+    grid-template-columns: repeat(4, [col-start] 1fr);
+    margin: 0px 20px 0px 20px;
+  }
+
+  .logo {
+    grid-column: 1 / span 2;
+    text-align: left;
+  }
+
+  .header-knap {
+    grid-column: 3 / span 2;
+    text-align: right;
+
+  }
+
+  .tlf-knap {
+    font-size: 18px;
+  }
+
+  .tlf-knap img {
+    width: 20px;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, [col-start] 1fr);
+    margin-bottom: 0;
+  }
+
+  .bokse {
+    grid-column: 1 / span 4;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  .hero {
+    grid-column: 1 / span 14;
+    padding: 230px 0px 30px 0px;
+  }
+
+  .tekst-art h3 {
+    font-size: 30px;
+  }
+
+  .ikon-img {
+    width: 200px;
+  }
+
+  .boks-sec {
+    margin: 30px 20px 30px 20px;
+    display: grid;
+    grid-template-columns: repeat(2, [col-start] 1fr);
+    padding: 50px 20px 50px 20px;
+    text-align: center;
+  }
+
+  .video-wrap {
+    grid-column: 1 / span 4;
+    grid-template-columns: repeat(4, [col-start] 1fr);
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .ikon {
+    grid-column: 1 / span 2;
+  }
+
+  .tekst-art {
+    grid-column: 1/ span 2;
+  }
+
+  .showreel {
+    grid-column: 1 / span 4;
+    display: grid;
+    grid-template-columns: repeat(2, [col-start] 1fr);
+    margin: 50px 20px 20px 20px;
+    padding: 0px;
+  }
+
+  .showreel-video {
+    grid-column: 1 / span 2;
+  }
+
+  .showreel-tekst-art {
+    grid-column: 1/ span 2;
+  }
+
+  .showreel h3 {
+    margin-top: 30px;
+    font-size: 30px;
+  }
+
+  .tjek {
+    grid-column: 1 / span 4;
+    display: grid;
+    grid-template-columns: repeat(4, [col-start] 1fr);
+    display: none;
+  }
+
+  .video {
+    grid-column: 1 / span 4;
+    align-self: center;
+  }
+
+  .tekst {
+    grid-column: 1/ span 4;
+    margin-top: 30px;
+  }
+
+  .tekst h3 {
+    font-size: 30px;
+  }
+
+  .container {
+    height: 300px;
+    margin-top: 30px;
+  }
+
+  .cv-tekst h3 {
+    font-size: 30px;
+  }
+
+  .cv-tekst p {
+    font-size: 18px;
+  }
+
+  .cv-knap-art {
+    grid-column: 2 / span 12;
+  }
+
+  .cv-tekst {
+    grid-column: 2 / span 12;
+    color: white;
+  }
+}
